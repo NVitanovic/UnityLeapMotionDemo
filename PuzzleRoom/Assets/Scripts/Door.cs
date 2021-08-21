@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Door : MonoBehaviour, IInteractable
 {
-    // Start is called before the first frame update
     public Animator animator;
     public bool open;
     public bool triggerEnabled = true;
@@ -15,8 +14,6 @@ public class Door : MonoBehaviour, IInteractable
         textMesh = GetComponentInChildren<Text>();
         textMesh.text = text;
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(open == true)

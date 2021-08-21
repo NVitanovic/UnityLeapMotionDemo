@@ -22,6 +22,9 @@ public class PressurePlate : MonoBehaviour
         if (triggerEnabled)
         {
             animator.SetBool("pressed", false);
+
+            if (objectToTrigger != null)
+                objectToTrigger.GetComponent<IInteractable>().Interact();
             pressed = false;
         }  
     }
